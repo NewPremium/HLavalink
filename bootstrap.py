@@ -16,7 +16,7 @@ class LavalinkBootstrap:
         
         self._version_number = popen(
             
-            """curl --silent "https://api.github.com/repos/Frederikam/Lavalink/releases/latest" | grep -Po '"tag_name": "\K.*?(?=")'"""
+            """curl --silent "https://api.github.com/repos/Cog-Creators/Lavalink-Jars/releases/latest" | grep -Po '"tag_name": "\K.*?(?=")'"""
           
         ).read().strip()
 
@@ -28,7 +28,7 @@ class LavalinkBootstrap:
         
         self.prepare_version_number() # Fixes #1
         
-        self.download_command = f"curl https://github.com/Frederikam/Lavalink/releases/download/{self._version_number}/Lavalink.jar -O"
+        self.download_command = f"curl https://github.com/Cog-Creators/Lavalink-Jars/releases/download/{self._version_number}/Lavalink.jar -O"
         print(f"Download command: {self.download_command}")
 
         
